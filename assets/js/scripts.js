@@ -59,7 +59,7 @@ $(document).ready(function() {
     },
     onTabShow: function(tab, navigation, index) {
       var $total = navigation.find('li').length;
-      var $current = index+1;
+      var $current = index + 1;
       var $wizard = navigation.closest('.wizard-card');
       if($current >= $total) {
         $($wizard).find('.btn-next').hide();
@@ -90,24 +90,39 @@ $(document).ready(function() {
     if (pos === 1) {
       setVehicleAttribute(children, 0, -120, -180, -240, 1, 0.5, 0.5, 0.5);
       vehicle = 'Pick a Car';
+      $('[name="vehicle"]').val("car");
     } else if (pos === 2) {
       setVehicleAttribute(children, 30, -90, -210, -270, 0.5, 1, 0.5, 0.5);
       vehicle = 'Pick an SUV';
+      $('[name="vehicle"]').val("suv");
     } else if (pos === 3) {
       setVehicleAttribute(children, 0, -60, -180, -300, 0.5, 0.5, 1, 0.5);
       vehicle = 'Pick a Van';
+      $('[name="vehicle"]').val("van");
     } else {
       setVehicleAttribute(children, -30, -90, -150, -270, 0.5, 0.5, 0.5, 1);
       vehicle = 'Pick a Truck';
+      $('[name="vehicle"]').val("truck");
     }
     setButtonValue(0);
   });
-  $('[data-toggle="wizard-radio"]').click(function() {
-    wizard = $(this).closest('.wizard-card');
-    wizard.find('[data-toggle="wizard-radio"]').removeClass('active');
-    $(this).addClass('active');
-    $(wizard).find('[type="radio"]').removeAttr('checked');
-    $(this).find('[type="radio"]').attr('checked','true');
+  $('[data-toggle="radio-budget"]').click(function() {
+    setRadioAttribute(this, 'radio-budget');
+  });
+  $('[data-toggle="radio-trade"]').click(function() {
+    setRadioAttribute(this, 'radio-trade');
+  });
+  $('[data-toggle="radio-credit"]').click(function() {
+    setRadioAttribute(this, 'radio-credit');
+  });
+  $('[data-toggle="radio-status"]').click(function() {
+    setRadioAttribute(this, 'radio-status');
+  });
+  $("body").on("submit", "form", function(event) {
+    event.stopPropagation();
+    event.preventDefault();
+    var data = $(this).serialize();
+    console.log(data);
   });
 });
 
@@ -116,6 +131,12 @@ function setVehicleAttribute(ch, v1, v2, v3, v4, o1, o2, o3, o4) {
   $(ch[1]).css({"-webkit-transform": "rotateY("+v2+"deg)", "-moz-transform": "rotateY("+v2+"deg)", "transform": "rotateY("+v2+"deg)", "opacity": o2});
   $(ch[2]).css({"-webkit-transform": "rotateY("+v3+"deg)", "-moz-transform": "rotateY("+v3+"deg)", "transform": "rotateY("+v3+"deg)", "opacity": o3});
   $(ch[3]).css({"-webkit-transform": "rotateY("+v4+"deg)", "-moz-transform": "rotateY("+v4+"deg)", "transform": "rotateY("+v4+"deg)", "opacity": o4});
+}
+function setRadioAttribute(el, rb) {
+  wizard = $(el).closest('.wizard-card');
+  wizard.find('[data-toggle="'+rb+'"]').removeClass('active');
+  $(el).addClass('active');
+  $(el).find('[type="radio"]').attr('checked','true');
 }
 function setButtonValue(index) {
   if (index === 0) {

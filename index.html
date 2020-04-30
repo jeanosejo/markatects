@@ -71,7 +71,7 @@
                         </figure>
                         <span class="spinner-btn" data-sign="-">◀</span>
                         <span class="spinner-btn" data-sign="">▶</span>
-                        <input type="hidden" name="vehicle" value="1">
+                        <input type="hidden" name="vehicle" value="car">
                       </div>
                     </div>
                   </div>
@@ -82,16 +82,16 @@
                   <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
                       <div class="col-sm-4 col-sm-offset-2">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="budget" value="Design">
+                        <div class="choice" data-toggle="radio-budget">
+                          <input type="radio" name="budget" value="under" checked>
                           <div class="card card-checkboxes card-hover-effect">
                             <p>Under $250 / month</p>
                           </div>
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="budget" value="Design">
+                        <div class="choice" data-toggle="radio-budget">
+                          <input type="radio" name="budget" value="250">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>$250 - 374 / month</p>
                           </div>
@@ -100,16 +100,16 @@
                     </div>
                     <div class="col-sm-8 col-sm-offset-2">
                       <div class="col-sm-4 col-sm-offset-2">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="budget" value="Design">
+                        <div class="choice" data-toggle="radio-budget">
+                          <input type="radio" name="budget" value="375">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>$375 - 500 / month</p>
                           </div>
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="budget" value="Design">
+                        <div class="choice" data-toggle="radio-budget">
+                          <input type="radio" name="budget" value="over">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>Over $500 / month</p>
                           </div>
@@ -124,16 +124,16 @@
                   <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
                       <div class="col-sm-4 col-sm-offset-2">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="trade" value="Design">
+                        <div class="choice" data-toggle="radio-trade">
+                          <input type="radio" name="trade" value="yes">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>Yes</p>
                           </div>
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="trade" value="Design">
+                        <div class="choice" data-toggle="radio-trade">
+                          <input type="radio" name="trade" value="no">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>No</p>
                           </div>
@@ -142,8 +142,8 @@
                     </div>
                     <div class="col-sm-8 col-sm-offset-2">
                       <div class="col-sm-4 col-sm-offset-4">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="trade" value="Design">
+                        <div class="choice" data-toggle="radio-trade">
+                          <input type="radio" name="trade" value="unsure">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>Unsure</p>
                           </div>
@@ -158,24 +158,24 @@
                   <div class="row">
                     <div class="col-sm-10 col-sm-offset-1">
                       <div class="col-sm-4">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="credit" value="Design">
+                        <div class="choice" data-toggle="radio-credit">
+                          <input type="radio" name="credit" value="good">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>Good (Over 650)</p>
                           </div>
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="credit" value="Design">
+                        <div class="choice" data-toggle="radio-credit">
+                          <input type="radio" name="credit" value="fair">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>Fair (550-650)</p>
                           </div>
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="credit" value="Design">
+                        <div class="choice" data-toggle="radio-credit">
+                          <input type="radio" name="credit" value="poor">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>Poor (Under 550)</p>
                           </div>
@@ -184,16 +184,16 @@
                     </div>
                     <div class="col-sm-8 col-sm-offset-2">
                       <div class="col-sm-4 col-sm-offset-2">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="credit" value="Design">
+                        <div class="choice" data-toggle="radio-credit">
+                          <input type="radio" name="credit" value="bankrupt">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>Current Bankruptcy</p>
                           </div>
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="credit" value="Design">
+                        <div class="choice" data-toggle="radio-credit">
+                          <input type="radio" name="credit" value="unsure">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>No Credit / Unsure</p>
                           </div>
@@ -208,24 +208,24 @@
                   <div class="row">
                     <div class="col-sm-10 col-sm-offset-1">
                       <div class="col-sm-4">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="status" value="Design">
+                        <div class="choice" data-toggle="radio-status">
+                          <input type="radio" name="status" value="employed">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>Employed</p>
                           </div>
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="status" value="Design">
+                        <div class="choice" data-toggle="radio-status">
+                          <input type="radio" name="status" value="self">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>Self-Employed</p>
                           </div>
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="status" value="Design">
+                        <div class="choice" data-toggle="radio-status">
+                          <input type="radio" name="status" value="student">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>Student</p>
                           </div>
@@ -234,16 +234,16 @@
                     </div>
                     <div class="col-sm-8 col-sm-offset-2">
                       <div class="col-sm-4 col-sm-offset-2">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="status" value="Design">
+                        <div class="choice" data-toggle="radio-status">
+                          <input type="radio" name="status" value="retired">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>Retired / Pension</p>
                           </div>
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="choice" data-toggle="wizard-radio">
-                          <input type="radio" name="status" value="Design">
+                        <div class="choice" data-toggle="radio-status">
+                          <input type="radio" name="status" value="other">
                           <div class="card card-checkboxes card-hover-effect">
                             <p>Other</p>
                           </div>
@@ -292,7 +292,7 @@
               <div class="wizard-footer">
                 <input type="button" class="btn btn-previous btn-default btn-wd" name="previous" value="Previous" />
                 <input type="button" class="btn btn-next btn-fill btn-danger btn-wd" name="next" value="Pick a Car" id="btnNext" />
-                <input type="button" class="btn btn-finish btn-fill btn-success btn-wd" name="finish" value="Get Pre-Approval" data-toggle="modal" data-target="#approvalModal" />
+                <input type="submit" class="btn btn-finish btn-fill btn-success btn-wd" name="finish" value="Get Pre-Approval" data-toggle="modal" data-target="#approvalModal" />
                 <div class="clearfix"></div>
               </div>
             </form>
