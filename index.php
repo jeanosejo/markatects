@@ -199,7 +199,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-md-4 col-sm-6 col-sm-offset-3">
+                      <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3">
                         <div class="choice" data-toggle="radio-credit">
                           <input type="radio" name="credit" value="unsure">
                           <div class="card card-checkboxes card-hover-effect">
@@ -249,7 +249,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-md-4 col-sm-6 col-sm-offset-3">
+                      <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3">
                         <div class="choice" data-toggle="radio-status">
                           <input type="radio" name="status" value="other">
                           <div class="card card-checkboxes card-hover-effect">
