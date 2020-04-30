@@ -15,13 +15,13 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-sm-10 col-sm-offset-1">
+      <div class="col-md-10 col-md-offset-1">
         <div class="wizard-container">
           <div class="card wizard-card" id="wizard">
             <form action="" method="">
               <div class="wizard-navigation">
                 <div class="progress-with-circle">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="4" style="width: 15%;"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="4"></div>
                 </div>
                 <ul>
                   <li>
@@ -57,22 +57,30 @@
               <div class="tab-content">
                 <div class="tab-pane" id="type">
                   <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                       <h5 class="info-text"> Pick Your Type Of Vehicle</h5>
                       <p class="info-subtext">Please select the type of vehicle that you want</p>
                     </div>
-                    <div class="col-sm-12">
-                      <div id="carousel">
-                        <figure id="spinner">
-                          <img src="images/car.png" alt="">
-                          <img src="images/suv.png" alt="">
-                          <img src="images/van.png" alt="">
-                          <img src="images/truck.png" alt="">
-                        </figure>
-                        <span class="spinner-btn" data-sign="-">◀</span>
-                        <span class="spinner-btn" data-sign="">▶</span>
-                        <input type="hidden" name="vehicle" value="car">
+                    <div class="col-md-12 slider_container">
+                      <div class="cascade-slider_container" id="cascade-slider">
+                        <div class="cascade-slider_slides">
+                          <div class="cascade-slider_item" data-vehicle="car">
+                            <img src="images/car.png" alt="">
+                          </div>
+                          <div class="cascade-slider_item" data-vehicle="suv">
+                            <img src="images/suv.png" alt="">
+                          </div>
+                          <div class="cascade-slider_item" data-vehicle="van">
+                            <img src="images/van.png" alt="">
+                          </div>
+                          <div class="cascade-slider_item" data-vehicle="truck">
+                            <img src="images/truck.png" alt="">
+                          </div>
+                        </div>
                       </div>
+                      <span class="cascade-slider_arrow cascade-slider_arrow-left" data-action="prev">◀</span>
+                      <span class="cascade-slider_arrow cascade-slider_arrow-right" data-action="next">▶</span>
+                      <input type="hidden" name="vehicle" value="car">
                     </div>
                   </div>
                 </div>
@@ -80,8 +88,8 @@
                   <h5 class="info-text">What Is Your Budget?</h5>
                   <p class="info-subtext">Please choose an estimate that will fit your budget</p>
                   <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
-                      <div class="col-sm-4 col-sm-offset-2">
+                    <div class="col-md-10 col-md-offset-1">
+                      <div class="col-md-4 col-md-offset-2 col-sm-6">
                         <div class="choice" data-toggle="radio-budget">
                           <input type="radio" name="budget" value="under" checked>
                           <div class="card card-checkboxes card-hover-effect">
@@ -89,7 +97,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-4">
+                      <div class="col-md-4 col-sm-6">
                         <div class="choice" data-toggle="radio-budget">
                           <input type="radio" name="budget" value="250">
                           <div class="card card-checkboxes card-hover-effect">
@@ -98,8 +106,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-8 col-sm-offset-2">
-                      <div class="col-sm-4 col-sm-offset-2">
+                    <div class="col-md-10 col-md-offset-1">
+                      <div class="col-md-4 col-md-offset-2 col-sm-6">
                         <div class="choice" data-toggle="radio-budget">
                           <input type="radio" name="budget" value="375">
                           <div class="card card-checkboxes card-hover-effect">
@@ -107,7 +115,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-4">
+                      <div class="col-md-4 col-sm-6">
                         <div class="choice" data-toggle="radio-budget">
                           <input type="radio" name="budget" value="over">
                           <div class="card card-checkboxes card-hover-effect">
@@ -122,8 +130,8 @@
                   <h5 class="info-text">Do You Have A Trade In?</h5>
                   <p class="info-subtext">If you have a vehicle that you want to trade with</p>
                   <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
-                      <div class="col-sm-4 col-sm-offset-2">
+                    <div class="col-md-10 col-md-offset-1">
+                      <div class="col-md-4 col-md-offset-2 col-sm-6">
                         <div class="choice" data-toggle="radio-trade">
                           <input type="radio" name="trade" value="yes">
                           <div class="card card-checkboxes card-hover-effect">
@@ -131,7 +139,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-4">
+                      <div class="col-md-4 col-sm-6">
                         <div class="choice" data-toggle="radio-trade">
                           <input type="radio" name="trade" value="no">
                           <div class="card card-checkboxes card-hover-effect">
@@ -140,8 +148,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-8 col-sm-offset-2">
-                      <div class="col-sm-4 col-sm-offset-4">
+                    <div class="col-md-10 col-md-offset-1">
+                      <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
                         <div class="choice" data-toggle="radio-trade">
                           <input type="radio" name="trade" value="unsure">
                           <div class="card card-checkboxes card-hover-effect">
@@ -156,8 +164,8 @@
                   <h5 class="info-text">What Is Your Estimated Credit Rating?</h5>
                   <p class="info-subtext">Please choose your estimated credit card rating</p>
                   <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1">
-                      <div class="col-sm-4">
+                    <div class="col-md-10 col-md-offset-1">
+                      <div class="col-md-4 col-sm-6">
                         <div class="choice" data-toggle="radio-credit">
                           <input type="radio" name="credit" value="good">
                           <div class="card card-checkboxes card-hover-effect">
@@ -165,7 +173,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-4">
+                      <div class="col-md-4 col-sm-6">
                         <div class="choice" data-toggle="radio-credit">
                           <input type="radio" name="credit" value="fair">
                           <div class="card card-checkboxes card-hover-effect">
@@ -173,7 +181,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-4">
+                      <div class="col-md-4 col-sm-6">
                         <div class="choice" data-toggle="radio-credit">
                           <input type="radio" name="credit" value="poor">
                           <div class="card card-checkboxes card-hover-effect">
@@ -182,8 +190,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-8 col-sm-offset-2">
-                      <div class="col-sm-4 col-sm-offset-2">
+                    <div class="col-md-10 col-md-offset-1">
+                      <div class="col-md-4 col-md-offset-2 col-sm-6">
                         <div class="choice" data-toggle="radio-credit">
                           <input type="radio" name="credit" value="bankrupt">
                           <div class="card card-checkboxes card-hover-effect">
@@ -191,7 +199,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-4">
+                      <div class="col-md-4 col-sm-6 col-sm-offset-3">
                         <div class="choice" data-toggle="radio-credit">
                           <input type="radio" name="credit" value="unsure">
                           <div class="card card-checkboxes card-hover-effect">
@@ -206,8 +214,8 @@
                   <h5 class="info-text">What Is Your Employment Status?</h5>
                   <p class="info-subtext">Please choose your current employment status</p>
                   <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1">
-                      <div class="col-sm-4">
+                    <div class="col-md-10 col-md-offset-1">
+                      <div class="col-md-4 col-sm-6">
                         <div class="choice" data-toggle="radio-status">
                           <input type="radio" name="status" value="employed">
                           <div class="card card-checkboxes card-hover-effect">
@@ -215,7 +223,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-4">
+                      <div class="col-md-4 col-sm-6">
                         <div class="choice" data-toggle="radio-status">
                           <input type="radio" name="status" value="self">
                           <div class="card card-checkboxes card-hover-effect">
@@ -223,7 +231,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-4">
+                      <div class="col-md-4 col-sm-6">
                         <div class="choice" data-toggle="radio-status">
                           <input type="radio" name="status" value="student">
                           <div class="card card-checkboxes card-hover-effect">
@@ -232,8 +240,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-8 col-sm-offset-2">
-                      <div class="col-sm-4 col-sm-offset-2">
+                    <div class="col-md-10 col-md-offset-1">
+                      <div class="col-md-4 col-md-offset-2 col-sm-6">
                         <div class="choice" data-toggle="radio-status">
                           <input type="radio" name="status" value="retired">
                           <div class="card card-checkboxes card-hover-effect">
@@ -241,7 +249,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-4">
+                      <div class="col-md-4 col-sm-6 col-sm-offset-3">
                         <div class="choice" data-toggle="radio-status">
                           <input type="radio" name="status" value="other">
                           <div class="card card-checkboxes card-hover-effect">
@@ -256,16 +264,18 @@
                   <h5 class="info-text">What Is Your Name?</h5>
                   <p class="info-subtext">Please enter your first and last name</p>
                   <div class="row">
-                    <div class="col-sm-5 col-sm-offset-1">
-                      <div class="form-group">
-                        <label>First Name</label>
-                        <input type="text" class="form-control" placeholder="First Name" name="firstname">
+                    <div class="col-md-10 col-md-offset-1">
+                      <div class="col-md-5 col-md-offset-1 col-sm-6">
+                        <div class="form-group">
+                          <label>First Name</label>
+                          <input type="text" class="form-control" placeholder="First Name" name="firstname">
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-sm-5">
-                      <div class="form-group">
-                        <label>Last Name</label>
-                        <input type="text" class="form-control" placeholder="Last Name" name="lastname">
+                      <div class="col-md-5 col-sm-6">
+                        <div class="form-group">
+                          <label>Last Name</label>
+                          <input type="text" class="form-control" placeholder="Last Name" name="lastname">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -274,16 +284,18 @@
                   <h5 class="info-text">Best Way To Contact You?</h5>
                   <p class="info-subtext">Please enter your primary email address and phone number</p>
                   <div class="row">
-                    <div class="col-sm-5 col-sm-offset-1">
-                      <div class="form-group">
-                        <label>Email Address</label>
-                        <input type="email" class="form-control" name="email" placeholder="Email Address">
+                    <div class="col-md-10 col-md-offset-1">
+                      <div class="col-md-5 col-md-offset-1 col-sm-6">
+                        <div class="form-group">
+                          <label>Email Address</label>
+                          <input type="email" class="form-control" name="email" placeholder="Email Address">
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-sm-5">
-                      <div class="form-group">
-                        <label>Phone Number</label>
-                        <input type="text" class="form-control" name="phone" placeholder="Primary Phone Number">
+                      <div class="col-md-5 col-sm-6">
+                        <div class="form-group">
+                          <label>Phone Number</label>
+                          <input type="text" class="form-control" name="phone" placeholder="Primary Phone Number">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -311,7 +323,7 @@
         </div>
         <div class="modal-body">
           <div class="row">
-            <div class="col-sm-10 col-sm-offset-1">
+            <div class="col-md-10 col-md-offset-1">
               <div class="check-container">
                 <i class="ti-check"></i>
               </div>
@@ -332,5 +344,10 @@
   <script src="assets/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
   <script src="assets/js/scripts.js" type="text/javascript"></script>
   <script src="assets/js/jquery.validate.min.js" type="text/javascript"></script>
+  <script>
+    $('#cascade-slider').cascadeSlider({
+      
+    });
+  </script>
 </body>
 </html>
